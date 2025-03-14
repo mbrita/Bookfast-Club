@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Получаем измененные файлы, которые будут коммититься
+FILES=$(git diff --name-only --cached -- "*.js" "*.ts" "*.jsx" "*.tsx")
+
+if [ "$FILES" != "" ]; then
+  npx prettier --config .prettierrc --check $FILES || exit 1
+  npx eslint --config eslint.config.js $FILES || exit 1
+  npx tsc --noEmit --project tsconfig.app.json
+fi

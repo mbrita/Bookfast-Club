@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "lint:ts": "npx eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "npx eslint \"**/*.{ts,tsx}\"--fix",
-    "prettier:fix": "npx prettier . --write"
+    "prettier:fix": "npx prettier . --write",
+    "check-types": "tsc --noEmit --project tsconfig.app.json",
+    "prepare": "git config core.hooksPath .git-hooks || echo 'Not in a git repo'",
+    "postinstall": "chmod +x .git-hooks/pre-commit"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
