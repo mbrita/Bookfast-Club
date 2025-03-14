@@ -13,7 +13,7 @@
     "prettier:fix": "npx prettier . --write",
     "check-types": "tsc --noEmit --project tsconfig.app.json",
     "prepare": "git config core.hooksPath .git-hooks || echo 'Not in a git repo'",
-    "postinstall": "chmod +x .git-hooks/pre-commit"
+    "postinstall": "node -e \"if (process.platform === 'darwin') require('child_process').execSync('chmod +x .git-hooks/pre-commit');\""
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
