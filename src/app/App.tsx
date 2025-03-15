@@ -1,8 +1,14 @@
+import { queryClient } from '../shared/api/queryClient';
 import './App.css';
-import { AppRouter } from '../providers/router/ui/AppRouter';
+import { AppRouter } from './providers/AppRouter';
+import { QueryProvider } from './providers/QueryProvider';
 
 function App() {
-  return <AppRouter />;
+  return (
+    <QueryProvider client={queryClient}>
+      <AppRouter />
+    </QueryProvider>
+  );
 }
 
 export default App;
