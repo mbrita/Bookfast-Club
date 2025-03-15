@@ -1,4 +1,4 @@
-import { useUsers } from '../../shared/api/userApi';
+import { useUsers } from '@/shared/api/userApi';
 
 export const UserList = () => {
   const { data: users, isLoading, error } = useUsers();

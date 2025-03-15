@@ -1,4 +1,4 @@
-import { UserList } from '../../features/UserList/UserList';
+import { UserList } from '@/features/UserList/UserList';
 
 export const Main = () => {
   return (
