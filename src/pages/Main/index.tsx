@@ -1,5 +1,10 @@
-export const Main = () => {
-  return <h1>Welcome home!</h1>;
-};
+import { UserList } from '@/features/UserList/UserList';
 
-export default Main;
+export const Main = () => {
+  return (
+    <>
+      <h1>Welcome home!</h1>
+      <UserList />
+    </>
+  );
+};
