@@ -1,14 +1,15 @@
 import { openLibraryApi } from '@/shared/api';
+import { SearchBookQueryParams, SearchBook } from '../model/book';
 
-export const getBooks = async (
-  query?: string,
-  fields?: Record<string, string>,
-  sort?: string,
-  limit?: number,
-  offset?: number,
-  page?: number,
-  lang?: string,
-) => {
+export const getBooks = async ({
+  query,
+  fields,
+  sort,
+  limit,
+  offset,
+  page,
+  lang,
+}: SearchBookQueryParams): Promise<SearchBook> => {
   const params = new URLSearchParams();
 
   if (query) params.set('q', query);
