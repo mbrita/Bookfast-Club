@@ -3,7 +3,7 @@ import './App.css';
 import { AppRouter } from './providers/AppRouter';
 import { QueryProvider } from './providers/QueryProvider';
 import { ThemeProvider } from '@emotion/react';
-import { theme } from '@/shared/config/theme/Theme';
+import { theme } from '@/shared/config';
 
 function App() {
   return (

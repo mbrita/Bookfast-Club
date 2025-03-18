@@ -12,6 +12,7 @@
     "lint:ts:fix": "npx eslint \"**/*.{ts,tsx}\"--fix",
     "prettier:fix": "npx prettier . --write",
     "check-types": "tsc --noEmit --project tsconfig.app.json",
+    "fsd": "steiger ./src",
     "prepare": "git config core.hooksPath .git-hooks || echo 'Not in a git repo'",
     "postinstall": "node -e \"if (process.platform === 'darwin') require('child_process').execSync('chmod +x .git-hooks/pre-commit');\""
   },
@@ -38,6 +39,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "prettier": "3.5.3",
+    "steiger": "^0.5.5",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.2.0"
