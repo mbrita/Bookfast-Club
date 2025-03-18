@@ -1,4 +1,4 @@
-import { queryClient } from '@/shared/api/queryClient';
+import { queryClient } from '@/shared/api';
 import './App.css';
 import { AppRouter } from './providers/AppRouter';
 import { QueryProvider } from './providers/QueryProvider';

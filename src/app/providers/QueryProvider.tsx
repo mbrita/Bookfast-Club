@@ -11,7 +11,7 @@ export const QueryProvider = ({ client, children }: Props) => {
   return (
     <QueryClientProvider client={client}>
       {children}
-      {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 };

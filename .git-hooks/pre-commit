@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Получаем измененные файлы, которые будут коммититься
-FILES=$(git diff --name-only --cached -- "*.js" "*.ts" "*.jsx" "*.tsx")
+FILES=$(git diff --name-only --cached --diff-filter=ACM "*.js" "*.ts" "*.jsx" "*.tsx")
 
 if [ "$FILES" != "" ]; then
   npx prettier --config .prettierrc --check $FILES || exit 1
