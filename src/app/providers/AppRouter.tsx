@@ -1,14 +1,16 @@
 import { Main } from '@/pages/Main';
-import { routes } from '@/shared/const/routes';
-import { Layout } from '@/widget/layout';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { routes } from '@/shared/config';
+import { Layout } from '@/widgets/layout';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={routes.Main} element={<Layout />} />
-        <Route index element={<Main />} />
+        <Route path={routes.main} element={<Layout />}>
+          <Route index element={<Main />} />
+        </Route>
+        <Route path="*" element={<Navigate to={routes.main} />} />
       </Routes>
     </BrowserRouter>
   );
