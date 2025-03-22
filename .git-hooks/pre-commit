@@ -7,4 +7,5 @@ if [ "$FILES" != "" ]; then
   npx prettier --config .prettierrc --check $FILES || exit 1
   npx eslint --config eslint.config.js $FILES || exit 1
   npx tsc --noEmit --project tsconfig.app.json
+  npx steiger ./src
 fi
