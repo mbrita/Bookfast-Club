@@ -1,1 +1,2 @@
-export { theme } from './theme/Theme';
+export { theme } from './theme';
+export { routes } from './routes';
