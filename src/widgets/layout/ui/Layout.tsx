@@ -1,5 +1,6 @@
 import { Box, Container } from '@mui/material';
 import { Outlet } from 'react-router';
+import { Header } from './Header';
 
 export const Layout = () => {
   return (
@@ -11,7 +12,9 @@ export const Layout = () => {
       }}
       data-testid="Layout"
     >
-      <header></header>
+      <header>
+        <Header />
+      </header>
       <main
         style={{
           flex: 1,

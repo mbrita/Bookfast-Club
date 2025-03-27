@@ -1,6 +1,7 @@
 import { Main } from '@/pages/Main';
 import { routes } from '@/shared/config';
 import { Layout } from '@/widgets/layout';
+
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 export const AppRouter = () => {
